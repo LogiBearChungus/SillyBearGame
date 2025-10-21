@@ -1,0 +1,21 @@
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void FixedUpdate() // Use FixedUpdate for physics-related movement
+    {
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+
+        Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput).normalized; // Normalize for consistent diagonal speed
+        rb.MovePosition(transform.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+}
