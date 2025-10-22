@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+
+    public Stats stats;
     private Rigidbody rb;
 
     void Start()
@@ -25,6 +26,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Move the character forward
-        rb.MovePosition(transform.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(transform.position + movement * stats.speed * Time.fixedDeltaTime);
     }
 }

@@ -1,23 +1,29 @@
 using UnityEngine;
+using System.Collections;
 
 public class CharacterOne : MonoBehaviour
 {
+    public Stats stats;
+
     public GameObject projectile;
     public GameObject character;
 
     void Start()
     {
-        // Instantiate at the spawner's position and rotation
-        //Instantiate(projectile, transform.position, transform.rotation);
+        StartCoroutine(ShootLoop());
     }
 
-    void Update()
+    IEnumerator ShootLoop()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        while (true)
         {
-            // Instantiate at the character's position, with no rotation
-            Instantiate(projectile, character.transform.position + character.transform.forward * 1f, character.transform.rotation);
-
+            ShootIceProjectile();
+            yield return new WaitForSeconds(stats.attackSpeed);
         }
+    }
+
+    void ShootIceProjectile()
+    {
+        Instantiate(projectile, character.transform.position + character.transform.forward * 1f, character.transform.rotation * Quaternion.Euler(90f, 0f, 0f));
     }
 }
