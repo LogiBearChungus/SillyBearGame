@@ -55,11 +55,10 @@ You play as one of the **Ursa Guardians** — powerful bear warriors from ancien
 
 | Name | Role | Description |
 |------|------|--------------|
-| **Grizzlemaw** | Tank / Melee | Earthshock powers and heavy strikes. |
-| **Frostine** | Magic / Control | Ice attacks and slowing auras. |
-| **Ashpaw** | Fire / Damage | Burn enemies with fiery claws and explosions. |
-| **Thorncub** | Ranged / Trapper | Poison berries, snares, and traps. |
-| **Lunaglow** | Support / Healer | Celestial powers and healing light. |
+| **Earth-Bear** | Tank / Melee | Earthshock powers and heavy strikes. |
+| **Ice-Bear** | Magic / Control | Ice attacks and slowing auras. |
+| **Fire-Bear** | Fire / Damage | Burn enemies with fiery claws and explosions. |
+| **Poison-Bear** | Ranged / Trapper | Poison berries, snares, and traps. |
 
 ---
 
